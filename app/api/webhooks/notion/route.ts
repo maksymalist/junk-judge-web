@@ -84,7 +84,7 @@ const TYPES = [
   "cardboard",
 ];
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   if (!databaseId) {
     throw new Error("Database id is missing");
   }
