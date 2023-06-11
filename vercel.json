@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/webhooks/notion",
-      "schedule": "*/10 * * * *"
+      "schedule": "0 3 * * *"
     }
   ]
 }
