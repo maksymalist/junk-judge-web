@@ -23,3 +23,35 @@ export const listAllItems = async (path: string) => {
     };
   });
 };
+
+export const listAllItemsWithURL = async (path: string) => {
+  const storageRef = ref(storage, path);
+  const listResult = await listAll(storageRef);
+  const items = [];
+
+  for (const item of listResult.items) {
+    const type = item.parent?.name || "trash";
+    const key = item.name;
+    const url = `https://storage.googleapis.com/junk-judge.appspot.com/${path}/${key}`;
+
+    console.log(url);
+
+    const new_item = {
+      type,
+      key,
+      url,
+    };
+
+    items.push(new_item);
+  }
+
+  return items;
+};
+
+export const listItemWithURL = async (path: string, key: string) => {
+  return {
+    type: path,
+    key,
+    url: `https://storage.googleapis.com/junk-judge.appspot.com/${path}/${key}`,
+  };
+};

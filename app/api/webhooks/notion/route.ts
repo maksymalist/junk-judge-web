@@ -20,7 +20,7 @@ const sync_type = async (db_keys: string[], type: string) => {
     if (!db_keys.includes(image.key)) {
       console.log("adding", image.key);
 
-      const url = await getItemURL(type, image.key);
+      const url = `https://storage.googleapis.com/junk-judge.appspot.com/${type}/${image.key}`;
       const img = await fetch(url);
       const blob = await img.blob();
 
