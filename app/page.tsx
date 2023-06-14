@@ -25,8 +25,9 @@ export default async function Home() {
           <Image
             src="/assets/logo.png"
             alt="Junk Judge"
-            width={500}
-            height={500}
+            className="m-10"
+            width={400}
+            height={400}
           />
           <NewsletterForm />
         </div>
@@ -34,46 +35,22 @@ export default async function Home() {
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="grid gap-4 text-white">
           {col1.map((image: any) => (
-            <MasonImage
-              src={`https://picsum.photos/${400}/${
-                Math.floor(Math.random() * 201) + 200
-              }`}
-              key={image.key}
-              type={image.type}
-            />
+            <MasonImage src={image.url} key={image.key} type={image.type} />
           ))}
         </div>
         <div className="grid gap-4 mt-10">
           {col2.map((image: any) => (
-            <MasonImage
-              src={`https://picsum.photos/${400}/${
-                Math.floor(Math.random() * 201) + 200
-              }`}
-              key={image.key}
-              type={image.type}
-            />
+            <MasonImage src={image.url} key={image.key} type={image.type} />
           ))}
         </div>
         <div className="grid gap-4">
           {col3.map((image: any) => (
-            <MasonImage
-              src={`https://picsum.photos/${400}/${
-                Math.floor(Math.random() * 201) + 200
-              }`}
-              key={image.key}
-              type={image.type}
-            />
+            <MasonImage src={image.url} key={image.key} type={image.type} />
           ))}
         </div>
         <div className="grid gap-4 mt-10">
           {col4.map((image: any) => (
-            <MasonImage
-              src={`https://picsum.photos/${400}/${
-                Math.floor(Math.random() * 201) + 200
-              }`}
-              key={image.key}
-              type={image.type}
-            />
+            <MasonImage src={image.url} key={image.key} type={image.type} />
           ))}
         </div>
       </section>
