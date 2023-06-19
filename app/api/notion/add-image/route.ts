@@ -7,7 +7,7 @@ const notion = new Client({
 
 const databaseId = process.env.NOTION_DATABASE_ID;
 
-export const createNotionEntry = async (
+const createNotionEntry = async (
   image_url: string,
   type: string,
   file_type: string,
