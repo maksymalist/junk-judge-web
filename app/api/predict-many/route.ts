@@ -48,5 +48,5 @@ export async function POST(request: Request) {
 
   const data = await predict(image_b64);
 
-  return NextResponse.json({ result: data.result });
+  return NextResponse.json({ result: data });
 }
