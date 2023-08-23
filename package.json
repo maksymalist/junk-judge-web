@@ -11,6 +11,7 @@
   "dependencies": {
     "@gradio/client": "^0.1.2",
     "@notionhq/client": "^2.2.5",
+    "@prisma/client": "5.1.1",
     "@types/node": "20.2.5",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",
@@ -30,6 +31,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.2"
+    "@types/uuid": "^9.0.2",
+    "prisma": "5.1.1"
   }
 }
