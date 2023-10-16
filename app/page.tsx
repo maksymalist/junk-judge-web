@@ -81,9 +81,7 @@ export default async function Home() {
           ))}
         </Marquee>
       </section>
-      <section className="mt-10">
-        <h2>Hello</h2>
-      </section>
+      <section className="mt-10"></section>
     </div>
   );
 }
