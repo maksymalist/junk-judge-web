@@ -1,24 +1,34 @@
 import MasonImage from "@/components/MasonImage";
 import Image from "next/image";
-import images from "@/data/images.json";
+import image_data from "@/data/image_data.json";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NewsletterForm from "@/components/NewsletterForm";
 import TypedHeader from "@/components/TypedHeader";
+import NavBar from "@/components/NavBar";
 import Marquee from "react-fast-marquee";
 
 export default async function Home() {
-  const getRandomElements = (array: any[], numberOfElements: number) => {
-    if (numberOfElements > array.length) {
-      throw new Error("Number of elements to select exceeds the array length.");
+  const shuffle = (array: any): any[] => {
+    let currentIndex = array.length,
+      randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
     }
 
-    const shuffledArray = array.sort(() => 0.5 - Math.random());
-    return shuffledArray.slice(0, numberOfElements);
+    return array;
   };
-  const divider = 10;
-  const row1 = getRandomElements(images, divider);
-  const row2 = getRandomElements(images, divider);
+
+  const images = shuffle(image_data);
+  const row1 = images.slice(0, image_data.length / 2);
+  const row2 = images.slice(image_data.length / 2, image_data.length);
 
   return (
     <div className="mt-10 flex w-full flex-col items-center">
@@ -41,7 +51,7 @@ export default async function Home() {
           Try demo 👀
         </a>
       </section>
-      <section className="flex flex-col w-full rotate-[5deg] mt-[-150px]">
+      <section className="flex flex-col w-full rotate-[5deg] mt-[-150px] bg-slate-900">
         <Marquee
           speed={75}
           autoFill
@@ -49,7 +59,11 @@ export default async function Home() {
           className="flex flex-row justify-evenly"
         >
           {row1.map((image: any) => (
-            <MasonImage src={image.url} key={image.key} type={image.type} />
+            <MasonImage
+              src={image.path}
+              key={image.type + image.path}
+              type={image.type}
+            />
           ))}
         </Marquee>
         <Marquee
@@ -59,9 +73,16 @@ export default async function Home() {
           className="flex flex-row justify-evenly"
         >
           {row2.map((image: any) => (
-            <MasonImage src={image.url} key={image.key} type={image.type} />
+            <MasonImage
+              src={image.path}
+              key={image.type + image.path}
+              type={image.type}
+            />
           ))}
         </Marquee>
+      </section>
+      <section className="mt-10">
+        <h2>Hello</h2>
       </section>
     </div>
   );
