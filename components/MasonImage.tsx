@@ -18,10 +18,7 @@ const MasonImage = (props: Props) => {
 
   return (
     <div>
-      <img className="h-auto max-w-full rounded-lg" src={src} alt={type} />
-      <div className="mt-[-30px] ml-2">
-        <Badge type={type} />
-      </div>
+      <Badge type={type} />
     </div>
   );
 };
