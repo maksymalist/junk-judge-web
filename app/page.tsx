@@ -1,58 +1,88 @@
 import MasonImage from "@/components/MasonImage";
 import Image from "next/image";
-import images from "@/data/mini-images.json";
+import image_data from "@/data/image_data.json";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NewsletterForm from "@/components/NewsletterForm";
+import TypedHeader from "@/components/TypedHeader";
+import NavBar from "@/components/NavBar";
+import Marquee from "react-fast-marquee";
 
 export default async function Home() {
-  const divider = Math.floor(images.length / 4);
-  const col1 = images.slice(0, divider);
-  const col2 = images.slice(divider, divider * 2);
-  const col3 = images.slice(divider * 2, divider * 3);
-  const col4 = images.slice(divider * 3, images.length);
+  const shuffle = (array: any): any[] => {
+    let currentIndex = array.length,
+      randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  };
+
+  const images = shuffle(image_data);
+  const row1 = images.slice(0, image_data.length / 2);
+  const row2 = images.slice(image_data.length / 2, image_data.length);
 
   return (
-    <div className="p-10 mt-10 flex w-full flex-col items-center">
-      <section className="flex flex-col items-center">
-        <h1 className="lg:text-8xl md:text-6xl text-5xl">
-          Junk Judge - A place to{" "}
-          <span className=" bg-green-400 bg-opacity-50">judge</span> <br />
-          <span className=" bg-fuchsia-500 bg-opacity-50">your junk</span>
-          . <br />
-        </h1>
+    <div className="mt-10 flex w-full flex-col items-center">
+      <section className="flex flex-col items-center z-10 p-10">
+        <TypedHeader />
         <div className="w-full flex lg:flex-row flex-col mb-20">
           <Image
             src="/assets/logo.png"
             alt="Junk Judge"
-            className="m-10"
+            className="m-4"
             width={400}
-            height={400}
+            height={600}
           />
           <NewsletterForm />
         </div>
+        <a
+          href="https://huggingface.co/spaces/maksymalist/junk-judge"
+          className="bg-fuchsia-500 p-4 rounded-full animate-bounce border-black border-4"
+        >
+          Try demo 👀
+        </a>
       </section>
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="grid gap-4 text-white">
-          {col1.map((image: any) => (
-            <MasonImage src={image.url} key={image.key} type={image.type} />
+      <section className="flex flex-col w-full rotate-[5deg] mt-[-150px] bg-slate-900">
+        <Marquee
+          speed={75}
+          autoFill
+          direction="left"
+          className="flex flex-row justify-evenly"
+        >
+          {row1.map((image: any) => (
+            <MasonImage
+              src={image.path}
+              key={image.type + image.path}
+              type={image.type}
+            />
           ))}
-        </div>
-        <div className="grid gap-4 mt-10">
-          {col2.map((image: any) => (
-            <MasonImage src={image.url} key={image.key} type={image.type} />
+        </Marquee>
+        <Marquee
+          speed={50}
+          autoFill
+          direction="right"
+          className="flex flex-row justify-evenly"
+        >
+          {row2.map((image: any) => (
+            <MasonImage
+              src={image.path}
+              key={image.type + image.path}
+              type={image.type}
+            />
           ))}
-        </div>
-        <div className="grid gap-4">
-          {col3.map((image: any) => (
-            <MasonImage src={image.url} key={image.key} type={image.type} />
-          ))}
-        </div>
-        <div className="grid gap-4 mt-10">
-          {col4.map((image: any) => (
-            <MasonImage src={image.url} key={image.key} type={image.type} />
-          ))}
-        </div>
+        </Marquee>
+      </section>
+      <section className="mt-10">
+        <h2>Hello</h2>
       </section>
     </div>
   );

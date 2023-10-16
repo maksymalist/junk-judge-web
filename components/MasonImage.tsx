@@ -1,5 +1,6 @@
 import React from "react";
 import Badge from "./Badge";
+import Image from "next/image";
 
 type Props = {
   src: string;
@@ -17,8 +18,14 @@ const MasonImage = (props: Props) => {
   const { src, type } = props;
 
   return (
-    <div>
-      <img className="h-auto max-w-full rounded-lg" src={src} alt={type} />
+    <div className="p-4">
+      <Image
+        src={`/assets/${src}`}
+        alt={type}
+        width={200}
+        height={200}
+        className="rounded-lg w-[200px] h-[200px]"
+      />
       <div className="mt-[-30px] ml-2">
         <Badge type={type} />
       </div>
