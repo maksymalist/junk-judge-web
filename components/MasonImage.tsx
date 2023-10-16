@@ -22,6 +22,7 @@ const MasonImage = (props: Props) => {
       <Image
         src={`/assets/${src}`}
         placeholder="blur"
+        loading="lazy"
         blurDataURL="/assets/images.jpeg"
         alt={type}
         width={200}
