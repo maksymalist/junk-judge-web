@@ -29,13 +29,19 @@ export default async function Home() {
             src="/assets/logo.png"
             alt="Junk Judge"
             className="m-4"
-            width={500}
-            height={500}
+            width={400}
+            height={600}
           />
           <NewsletterForm />
         </div>
+        <a
+          href="https://huggingface.co/spaces/maksymalist/junk-judge"
+          className="bg-fuchsia-500 p-4 rounded-full animate-bounce border-black border-4"
+        >
+          Try demo 👀
+        </a>
       </section>
-      <section className="flex flex-col w-full rotate-[5deg]">
+      <section className="flex flex-col w-full rotate-[5deg] mt-[-150px]">
         <Marquee
           speed={75}
           autoFill
