@@ -32,6 +32,7 @@ export default async function Home() {
 
   return (
     <div className="mt-10 flex w-full flex-col items-center">
+      <NavBar />
       <section className="flex flex-col items-center z-10 p-10">
         <TypedHeader />
         <div className="w-full flex lg:flex-row flex-col mb-20">
@@ -46,9 +47,9 @@ export default async function Home() {
         </div>
         <a
           href="https://huggingface.co/spaces/maksymalist/junk-judge"
-          className="bg-fuchsia-500 p-4 rounded-full animate-bounce border-black border-4"
+          className="bg-fuchsia-500 p-4 rounded-full animate-bounce border-black border-4 text-white font-bold"
         >
-          Try demo 👀
+          Try AI demo 👀
         </a>
       </section>
       <section className="flex flex-col w-full rotate-[5deg] mt-[-150px] bg-slate-900">

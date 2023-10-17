@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/uuid": "^9.0.2",
-    "prisma": "5.1.1"
+    "prisma": "5.1.1",
+    "tailwindcss-dotted-background": "^1.1.0"
   }
 }

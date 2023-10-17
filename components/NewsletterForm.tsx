@@ -39,19 +39,26 @@ const NewsletterForm = (props: Props) => {
   return (
     <>
       <ToastContainer />
-      <div className="bg-black bg-opacity-60 p-4 rounded">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-">
+      <div className="bg-black dark:border-white border-2 p-4 rounded-lg rotate-[5deg]">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px border-l-white border-t-white border-l-2 border-t-2">
           <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
-              Sign up for our newsletter 📬
+            <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl text-white">
+              Join our waitlist 📬
             </h2>
             <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
               Stay up to date with the roadmap progress, announcements and
-              exclusive content feel free to sign up with your email.
+              exclusive and get{" "}
+              <span className="font-bold text-white">
+                early access to the app
+              </span>
+              .
             </p>
           </div>
         </div>
-        <form onSubmit={subscribe_email}>
+        <form
+          className="border-r-white border-b-white border-r-2 border-b-2 pb-6 p-4"
+          onSubmit={subscribe_email}
+        >
           <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
             <div className="relative w-full">
               <label className="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
@@ -81,11 +88,11 @@ const NewsletterForm = (props: Props) => {
                 disabled={loading}
                 className={
                   loading
-                    ? "py-3 px-5 w-52 text-sm font-medium text-center bg-slate-400 text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                    : "py-3 px-5 w-36 text-sm font-medium text-center bg-green-400 text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    ? "py-3 px-5 w-52 text-sm font-bold text-center bg-slate-400 text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    : "py-3 px-5 w-36 text-sm font-bold text-center bg-green-400 text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                 }
               >
-                Subscribe ✉️
+                get access 🚀
               </button>
             </div>
           </div>
