@@ -19,7 +19,7 @@ const NewsletterForm = (props: Props) => {
         return;
       }
 
-      await fetch("https://junk-judge-web.vercel.app/api/subscribe", {
+      await fetch("https://trashapp.me/api/subscribe", {
         body: JSON.stringify({
           email: email,
         }),
