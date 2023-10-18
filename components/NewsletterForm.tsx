@@ -27,6 +27,7 @@ const NewsletterForm = (props: Props) => {
           "Content-Type": "application/json",
         },
         method: "POST",
+        credentials: "include",
       });
 
       toast.success("Success! 🎉 You are now subscribed to the newsletter.");
