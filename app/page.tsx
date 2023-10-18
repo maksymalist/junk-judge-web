@@ -31,9 +31,9 @@ export default async function Home() {
   const row2 = images.slice(image_data.length / 2, image_data.length);
 
   return (
-    <div className="mt-10 flex w-full flex-col items-center">
+    <div className="mt-4 flex w-full flex-col items-center">
       <NavBar />
-      <section className="flex flex-col items-center z-10 p-10">
+      <section className="flex flex-col items-center z-10 p-10 pt-4">
         <TypedHeader />
         <div className="w-full flex lg:flex-row flex-col mb-20">
           <Image

@@ -31,7 +31,7 @@ const NewsletterForm = (props: Props) => {
         credentials: "include",
       });
 
-      toast.success("Success! 🎉 You are now subscribed to the newsletter.");
+      toast.success("Success 🎉, You're in!");
       setLoading(false);
     } catch (error) {
       toast.error("Error! Please try again later.");
@@ -42,7 +42,7 @@ const NewsletterForm = (props: Props) => {
     <>
       <ToastContainer />
       <div className="bg-black dark:border-white border-2 p-4 rounded-lg rotate-[5deg]">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px border-l-white border-t-white border-l-2 border-t-2">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px border-l-white border-t-white border-l-2 border-t-2">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl text-white">
               Join our waitlist 📬
@@ -58,7 +58,7 @@ const NewsletterForm = (props: Props) => {
           </div>
         </div>
         <form
-          className="border-r-white border-b-white border-r-2 border-b-2 pb-6 p-4"
+          className="border-r-white border-b-white border-r-2 border-b-2 pb-20 p-4"
           onSubmit={subscribe_email}
         >
           <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
