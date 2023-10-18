@@ -19,12 +19,13 @@ const NewsletterForm = (props: Props) => {
         return;
       }
 
-      await fetch("https://trashapp.me/api/subscribe", {
+      await fetch("/api/subscribe", {
         body: JSON.stringify({
           email: email,
         }),
         headers: {
           "Content-Type": "application/json",
+          Accept: "*/*",
         },
         method: "POST",
         credentials: "include",
