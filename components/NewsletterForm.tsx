@@ -44,7 +44,7 @@ const NewsletterForm = (props: Props) => {
       <div className="bg-black dark:border-white border-2 p-4 rounded-lg rotate-[5deg]">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px border-l-white border-t-white border-l-2 border-t-2">
           <div className="mx-auto max-w-screen-md sm:text-center">
-            <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl text-white">
+            <h2 className="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl text-white">
               Join our waitlist 📬
             </h2>
             <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
