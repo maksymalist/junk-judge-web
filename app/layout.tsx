@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta property="og:image" content="/assets/banner"></meta>
+      <meta property="og:image" content="/assets/banner.png"></meta>
       <body className={inter.className}>{children}</body>
     </html>
   );
