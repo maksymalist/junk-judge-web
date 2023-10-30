@@ -3,11 +3,10 @@
   { "path": "trash_images/paper/1684552815748.png", "type": "paper" },
   { "path": "trash_images/paper/1684762037061.png", "type": "paper" },
   { "path": "trash_images/metal/1684958380102.png", "type": "cardboard" },
-  { "path": "trash_images/metal/1684958470132.png", "type": "metal" },
   { "path": "trash_images/cardboard/1684552936416.png", "type": "cardboard" },
   { "path": "trash_images/cardboard/1685014978302.png", "type": "cardboard" },
+  { "path": "trash_images/plastic/1686531046829.png", "type": "cardboard" },
   { "path": "trash_images/trash/1684693706373.png", "type": "trash" },
-  { "path": "trash_images/trash/1684761555286.png", "type": "trash" },
   { "path": "trash_images/trash/1684690899233.png", "type": "trash" },
   { "path": "trash_images/glass/1685145961119.png", "type": "glass" },
   { "path": "trash_images/glass/1686524365218.png", "type": "glass" },
@@ -15,7 +14,5 @@
   { "path": "trash_images/biological/1686530948524.png", "type": "biological" },
   { "path": "trash_images/biological/1684955739754.png", "type": "biological" },
   { "path": "trash_images/biological/1686495490817.png", "type": "biological" },
-  { "path": "trash_images/biological/1686530939412.png", "type": "biological" },
-  { "path": "trash_images/plastic/1686370728017.png", "type": "plastic" },
-  { "path": "trash_images/plastic/1686531046829.png", "type": "plastic" }
+  { "path": "trash_images/biological/1686530939412.png", "type": "biological" }
 ]
