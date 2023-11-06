@@ -1,9 +1,9 @@
 [
-  { "path": "trash_images/paper/1684761494276.png", "type": "paper" },
+  { "path": "trash_images/paper/1684761494276.png", "type": "trash" },
   { "path": "trash_images/paper/1684552815748.png", "type": "paper" },
   { "path": "trash_images/paper/1684762037061.png", "type": "cardboard" },
   { "path": "trash_images/metal/1684958380102.png", "type": "paper" },
-  { "path": "trash_images/cardboard/1684552936416.png", "type": "cardboard" },
+  { "path": "trash_images/cardboard/1684552936416.png", "type": "trash" },
   { "path": "trash_images/cardboard/1685014978302.png", "type": "cardboard" },
   { "path": "trash_images/plastic/1686531046829.png", "type": "cardboard" },
   { "path": "trash_images/trash/1684693706373.png", "type": "trash" },
