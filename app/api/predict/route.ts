@@ -38,6 +38,7 @@ const predict = async (image_b64: string) => {
 export async function POST(request: Request) {
   const req = await request.json();
   const { image_b64 } = req;
+  console.log(image_b64);
 
   if (!image_b64) {
     return NextResponse.error();

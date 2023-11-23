@@ -17,6 +17,7 @@
     "@types/react-dom": "18.2.4",
     "@upstash/qstash": "^0.3.6",
     "autoprefixer": "10.4.14",
+    "base-64": "^1.0.0",
     "encoding": "^0.1.13",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
@@ -33,6 +34,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/base-64": "^1.0.2",
     "@types/uuid": "^9.0.2",
     "prisma": "5.1.1",
     "tailwindcss-dotted-background": "^1.1.0"
