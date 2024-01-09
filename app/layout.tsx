@@ -15,10 +15,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta
-        property="og:image"
-        content="https://www.trashapp.me/assets/banner.png"
-      ></meta>
       <body className={inter.className}>{children}</body>
     </html>
   );
