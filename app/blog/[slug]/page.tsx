@@ -1,3 +1,5 @@
+"use client";
+
 import CoverImage from "@/components/CoverImage";
 import { getBlogEntry } from "../../../contentful/utils/get";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
