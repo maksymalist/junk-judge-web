@@ -45,6 +45,15 @@ export default async function BlogPage({
                 url={coverImage.fields.file.url}
               />
             </div>
+            <div className="my-8">
+              {" "}
+              <a
+                href="https://whop.com/trash-app-store/"
+                className="bg-[#3ed54b] w-[80%] m-2 text-white font-bold p-4 rounded-full animate-pulse"
+              >
+                Get eco-blueprint
+              </a>
+            </div>
             <h1 className="font-extrabold text-3xl mb-2">{title}</h1>
             <div className="flex justify-start flex-col">
               <Avatar name={author.name} picture={author.picture} />
