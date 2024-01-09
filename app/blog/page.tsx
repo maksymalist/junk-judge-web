@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { BlogQueryResult } from "../../contentful/types/types";
+"use client";
 import { getBlogEntries } from "../../contentful/utils/get";
 import MoreStories from "@/components/MoreStories";
 import BlogNavBar from "@/components/BlogNavBar";
