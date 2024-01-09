@@ -6,6 +6,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Avatar from "../../../components/Avatar";
 import BlogNavBar from "@/components/BlogNavBar";
 
+//
+
 export default async function BlogPage({
   params,
 }: {
