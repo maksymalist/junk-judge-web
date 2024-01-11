@@ -5,6 +5,7 @@ import { getBlogEntry } from "../../../contentful/utils/get";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Avatar from "../../../components/Avatar";
 import BlogNavBar from "@/components/BlogNavBar";
+import NewsletterForm from "@/components/NewsletterForm";
 
 //
 
@@ -70,6 +71,8 @@ export default async function BlogPage({
               {documentToReactComponents(content)}
             </div>
           </div>
+          <div className="my-8" />
+          <NewsletterForm />
         </div>
       </div>
     </>
