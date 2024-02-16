@@ -27,7 +27,7 @@ const predict = async (image_b64: string) => {
   const blob_img = base64toBlob(image_b64, "image/jpeg");
   console.log(blob_img);
 
-  const app = await client("https://e0f0f387c133e0763c.gradio.live");
+  const app = await client("https://1fe4f1458ac93cf5a0.gradio.live");
   const result: any = await app.predict("/predict", [
     blob_img, // blob in 'image' Image component
   ]);
